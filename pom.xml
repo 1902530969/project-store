@@ -16,7 +16,7 @@
 	<description>Demo project for Spring Boot</description>
 
 
-	<!--设置私服-->
+	<!--部署设置私服-->
 	<distributionManagement>
 		<repository>
 			<!--id的名字可以任意取，但是在setting文件中的属性<server>的ID与这里一致-->
@@ -48,6 +48,30 @@
             </snapshots>
         </repository>
     </repositories>
+
+<!--指定插件仓库：-->
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Nexus Plugins Repository </name>
+			<url>http://192.168.187.128:8081/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+
+
+
+
+
+
+
 
 
 
